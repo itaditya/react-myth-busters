@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Myth Busters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.1/fullpage.min.css">
+  <style>
+    @font-face {
+        font-family: 'Proxima Nova';
+        src: url('proxima-nova-font/Mark Simonson - Proxima Nova Alt Regular-webfont.eot');
+        src: url('proxima-nova-font/Mark Simonson - Proxima Nova Alt Regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('proxima-nova-font/Mark Simonson - Proxima Nova Alt Regular-webfont.woff') format('woff'),
+             url('proxima-nova-font/Mark Simonson - Proxima Nova Alt Regular-webfont.ttf') format('truetype'),
+             url('proxima-nova-font/Mark Simonson - Proxima Nova Alt Regular-webfont.svg#proxima_nova_altregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-size: 100%;
+      -webkit-text-size-adjust: 100%;
+      font-variant-ligatures: none;
+      -webkit-font-variant-ligatures: none;
+      text-rendering: optimizeLegibility;
+      -moz-osx-font-smoothing: grayscale;
+      font-smoothing: antialiased;
+      -webkit-font-smoothing: antialiased;
+      text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    }
+
+    .introduction-section, .myth-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #fff;
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .myth-title {
+      text-transform: uppercase;      
+    }
+
+    .myth-description {
+      width: 60%;
+      color: #d2d2d6;
+      font-size: 20px;
+      line-height: 40px;
+    }
+
+    .lighter-description {
+      color: #d5d5e6;
+    }
+
+    .myth-link {
+      color: #fff;
+    }
+
+    .myth-description code {
+      color: #eee;
+      background: #454d54;
+      border-radius: 3px;
+      padding: 2px 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="fullpage" class="myth-container">
+    <div class="section introduction-section">
+      <h1 class="myth-title">
+        React Myth Busters
+      </h1>
+      <p class="myth-description">
+        Because React is so popular, it attracts a lot of low-quality content and may propogate false myths.
+        Let's bust all of those.
+      </p>
+    </div>
+    <div class="section myth-section">
+      <h1 class="myth-title">
+        Myth 1 :
+      </h1>
+      <p class="myth-description">
+        React can’t be used as a <code>&lt;script&gt;</code> tag.
+        <br />
+        But you have to use <code>React.createElement()</code> instead of JSX.
+      </p>
+    </div>
+    <div class="section myth-section">
+      <h1 class="myth-title">
+        Myth 2 :
+      </h1>
+      <p class="myth-description">
+        If you want JSX, you need webpack.
+      </p>
+    </div>
+    <div class="section myth-section">
+      <h1 class="myth-title">
+        Myth 3 :
+      </h1>
+      <p class="myth-description lighter-description">
+        You need to use CSS-in-JS with React.
+        <br />
+        Not at all, you can use vanilla CSS, SASS, CSS Modules or any other css implementation known to developerkind.
+      </p>
+    </div>
+    <div class="section myth-section">
+      <h1 class="myth-title">
+        Myth 4 :
+      </h1>
+      <p class="myth-description lighter-description">
+        React isn’t good for accessibility
+        <br />
+        The React <a class="myth-link" href="https://reactjs.org/docs/accessibility.html">docs</a> cover this in great detail.
+      </p>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.1/fullpage.min.js"></script>
+  <script>
+    new fullpage('#fullpage', {
+      licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+      autoScrolling: true,
+      verticalCentered: false,
+      sectionsColor: ['#20313b', '#2C3E50', '#34495E', '#336E7B', '#67809F']
+    });
+  </script>
+</body>
+</html>
